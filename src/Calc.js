@@ -7,13 +7,15 @@ import { multiplication } from "./action/action";
 import { divide } from "./action/action";
 import { calculation } from "./action/action";
 import { connect } from "react-redux";
-
+import style from "./style.scss";
 //const getResult = store => store.result;
 
 class Calc extends Component {
     render() {
         return (
-            <div>
+            <div className="calculator">
+                <div className="result">{this.props.result}</div>
+
                 <button id="1" onClick={this.props.addToMemory}>
                     1
         </button>
@@ -59,8 +61,6 @@ class Calc extends Component {
                 <button onClick={this.props.clear}>Clear</button>
                 <button onClick={this.props.calculation}
                     disabled={this.props.disabled}>=</button>
-                <div>RESULT: {this.props.result}</div>
-                <div>PREV: {this.props.prev}</div>
             </div>
         );
     }

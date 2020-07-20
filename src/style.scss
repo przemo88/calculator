@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Red Rose';
+    font-style: cursiv;
+    font-weight: 700;
+    @import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@700&display=swap');
+  }
+
+  * {
+      font-family: 'Red Rose', cursive;
+      font-size: 30px;
+  }
+ 
+    .calculator{
+        background-color: #10869E;
+        width: 50%;
+        margin: 10% auto;
+    }
+
+    .result{
+        padding-top: 20px;
+        height: 50px;
+        width: 100%;
+    }
+
+    button{
+        background-color: #145587;
+        width: calc(100%/3);
+        height: 50px;
+        border: 1px solid #fff;
+
+        &:nth-last-child(2){
+            width: calc(100%/1.5);
+        }
+    }
+
+    @media(max-width: 768px){
+        .calculator{
+            width: 100%;
+        }
+    }
+
+    @media(orientation: landscape){
+        .calculator{
+            margin: 0 auto;
+        }
+    }
